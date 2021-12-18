@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Waterfall&display=swap');
+
+:root {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    animation: fadein ease 1s;
+    background-color: black;
+}
+.background {
+    background-image: url("/static/img/bg.jpg");
+    -webkit-filter: blur(5px) brightness(30%);
+            filter: blur(5px) brightness(30%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.scientist {
+    display: flex;
+    align-items: flex-end;
+    width: 40vw;
+    padding-left: 80px;
+    justify-content: flex-start;
+    animation: fadein ease 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.scientist img {
+    height: 90%;
+    -webkit-filter: drop-shadow(1px 1px 0 white)
+                    drop-shadow(-1px -1px 0 white);
+    filter: drop-shadow(1px 1px 0 white) 
+            drop-shadow(-1px -1px 0 white);
+}
+
+.info {
+    width: 60vw;
+    padding: 50px;
+    padding-right: 80px;
+    animation: fadein ease 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.tabs {
+    height: 40px;
+    display: flex;
+    padding-left: 1rem;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    width: 8vw;
+    padding: 20px;
+    margin-right: 6px;
+    border-radius: 20px 20px 0 0;
+    background-color: rgb(184, 148, 102);
+    cursor: pointer;
+    color: saddlebrown;
+    font-family: 'Waterfall', 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.active {
+    background-color: tan;
+    cursor: default;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menu {
+    background-color: tan;
+    border-radius: 1rem;
+    height: calc(100% - 140px);
+    padding: 50px;
+    color: saddlebrown;
+    font-family: 'Waterfall', 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.menu > * {
+    margin: 0.8rem 0;
+}
+
+.menu ul {
+    margin: 0;
+}
+
+.menu *:first-child {
+    margin-top: 0;
+}
+
+.menu *:last-child {
+    margin-bottom: 0;
+}
+
+.menu a {
+    color: rgb(102, 62, 31);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu b {
+    color: rgb(102, 62, 31);
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    position: absolute;
+    z-index: 99;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn span {
+    font-size: 5rem;
+}
+
+.prev {
+    bottom: calc(50vh - 2.5rem);
+    left: 0;
+}
+
+.next {
+    bottom: calc(50vh - 2.5rem);
+    right: 0px;
+}
+
+.tag {
+    position: absolute;
+    z-index: 97;
+    bottom: 0;
+    left: 0;
+    margin: 50px;
+    width: 0px;
+    height: calc(10rem - 6px);
+    border-right: 50px solid tan;
+    border-top: 33px solid transparent;
+    border-bottom: 33px solid transparent;
+    animation: tag ease 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.ring {
+    position: absolute;
+    bottom: calc(5.5rem + 50px);
+    left: 0;
+    margin-left: 74px;
+    z-index: 99;
+    width: 1rem;
+    height: 1rem;
+    border: 10px solid saddlebrown;
+    border-radius: 50%;
+    animation: tag ease 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.card {
+    position: absolute;
+    z-index: 98;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    margin: 50px;
+    margin-left: 100px;
+    padding: 30px;
+    padding-left: 40px;
+    width: 20rem;
+    height: 10rem;
+    background-color: tan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(102, 62, 31);
+    font-family: 'Waterfall', cursive;
+    animation: tag ease 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.card > * {
+    margin: 0;
+    font-weight: 600;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.location span {
+    margin-right: 5px;
+    font-weight: 100;
+}
+
+.name {
+    font-size: 3.6rem;
+}
+
+.nickname {
+    font-size: 2.4rem;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tag {
+    0% {
+        opacity: 0;
+        left: -25rem;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
