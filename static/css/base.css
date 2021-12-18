@@ -166,7 +166,7 @@ body {
     left: 0;
     margin: 50px;
     width: 0px;
-    height: calc(10rem - 6px);
+    height: calc(12rem - 6px);
     border-right: 50px solid tan;
     border-top: 33px solid transparent;
     border-bottom: 33px solid transparent;
@@ -177,7 +177,7 @@ body {
 
 .ring {
     position: absolute;
-    bottom: calc(5.5rem + 50px);
+    bottom: calc(6.5rem + 50px);
     left: 0;
     margin-left: 74px;
     z-index: 99;
@@ -200,8 +200,8 @@ body {
     margin-left: 100px;
     padding: 30px;
     padding-left: 40px;
-    width: 20rem;
-    height: 10rem;
+    width: 24rem;
+    height: 12rem;
     background-color: tan;
     display: flex;
     flex-direction: column;
@@ -218,14 +218,24 @@ body {
     font-weight: 600;
 }
 
-.location {
+.header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 1.6rem;
+}
+
+.header * {
+    margin: 0;
 }
 
 .location span {
     margin-right: 5px;
+    font-weight: 100;
+}
+
+.stars span {
+    margin-left: 5px;
     font-weight: 100;
 }
 

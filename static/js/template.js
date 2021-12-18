@@ -4,57 +4,68 @@ const info = [
     {
         "location": "England",
         "name": "John Dalton",
-        "nickname": "The Father of Chemistry"
+        "nickname": "The Father of Chemistry",
+        "stars": 2
     },
     {
         "location": "Russia",
         "name": "Dmitri Mendeleev",
-        "nickname": "The Father of the Periodic Table"
+        "nickname": "The Father of the Periodic Table",
+        "stars": 3
     },
     {
         "location": "England",
         "name": "J. J. Thomson",
-        "nickname": "Sir Plum Pudding"
+        "nickname": "Sir Plum Pudding",
+        "stars": 3
     },
     {
         "location": "New Zealand",
         "name": "Ernest Rutherford",
-        "nickname": "The Father of Nuclear Physics"
+        "nickname": "The Father of Nuclear Physics",
+        "stars": 4
     },
     {
         "location": "Denmark",
         "name": "Niels Bohr",
-        "nickname": "Nicholas Baker"
+        "nickname": "Nicholas Baker",
+        "stars": 4
     },
     {
         "location": "England",
         "name": "James Chadwick",
-        "nickname": "Jimmy Neutron"
+        "nickname": "Jimmy Neutron",
+        "stars": 3
     },
     {
         "location": "Germany",
         "name": "Max Planck",
-        "nickname": "The Founding Father of Quantum Theory"
+        "nickname": "The Founding Father of Quantum Theory",
+        "stars": 1
     },
     {
         "location": "Germany → America",
         "name": "Albert Einstein",
-        "nickname": "Der Depperte"
+        "nickname": "Der Depperte",
+        "stars": 5
     },
     {
         "location": "France",
         "name": "Louis de Broglie",
-        "nickname": "Jekyll and Hyde"
+        "nickname": "Jekyll and Hyde",
+        "stars": 2
     },
     {
         "location": "Austria-Hungary",
         "name": "Erwin Schrödinger",
-        "nickname": "Dead or Alive"
+        "nickname": "Dead or Alive",
+        "stars": 3
     },
     {
         "location": "Germany",
         "name": "Werner Heisenberg",
-        "nickname": "Walter White"
+        "nickname": "Walter White",
+        "stars": 2
     }
 ]
 const data = [
@@ -341,6 +352,8 @@ function setTemplate() {
     $(".name").text(info[scientist].name);
     $(".nickname").text(info[scientist].nickname);
     $(".portrait").attr("src", `static/img/${scientist}.png`)
+    const star = "<span class='material-icons'>star_border</span>";
+    $(".stars").html(star.repeat(info[scientist].stars));
     document.title = info[scientist].name
 }
 
