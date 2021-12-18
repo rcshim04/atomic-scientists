@@ -6,7 +6,8 @@
 
 body {
     margin: 0;
-    animation: fadein ease 1s;
+    -webkit-animation: fadein ease 1s;
+            animation: fadein ease 1s;
     background-color: black;
 }
 .background {
@@ -36,14 +37,23 @@ body {
 }
 
 .scientist {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     width: 40vw;
     padding-left: 80px;
-    justify-content: flex-start;
-    animation: fadein ease 1.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-animation: fadein ease 1.5s;
+            animation: fadein ease 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 
 .scientist img {
@@ -58,20 +68,29 @@ body {
     width: 60vw;
     padding: 50px;
     padding-right: 80px;
-    animation: fadein ease 1.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
+    -webkit-animation: fadein ease 1.5s;
+            animation: fadein ease 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 
 .tabs {
     height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 1rem;
 }
 
 .tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 8vw;
     padding: 20px;
     margin-right: 6px;
@@ -127,8 +146,12 @@ body {
 .menu a {
     color: rgb(102, 62, 31);
     text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .menu b {
@@ -170,9 +193,12 @@ body {
     border-right: 50px solid tan;
     border-top: 33px solid transparent;
     border-bottom: 33px solid transparent;
-    animation: tag ease 1.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
+    -webkit-animation: tag ease 1.5s;
+            animation: tag ease 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 
 .ring {
@@ -185,14 +211,19 @@ body {
     height: 1rem;
     border: 10px solid saddlebrown;
     border-radius: 50%;
-    animation: tag ease 1.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
+    -webkit-animation: tag ease 1.5s;
+            animation: tag ease 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 
 .card {
     position: absolute;
     z-index: 98;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     bottom: 0;
     left: 0;
@@ -204,13 +235,21 @@ body {
     height: 12rem;
     background-color: tan;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: rgb(102, 62, 31);
     font-family: 'Waterfall', cursive;
-    animation: tag ease 1.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
+    -webkit-animation: tag ease 1.5s;
+            animation: tag ease 1.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 
 .card > * {
@@ -219,16 +258,26 @@ body {
 }
 
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 1.6rem;
 }
 
 .header * {
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .location span {
@@ -258,12 +307,32 @@ body {
     text-decoration: none;
 }
 
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes fadein {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes tag {
+    0% {
+        opacity: 0;
+        left: -25rem;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
     }
 }
 
