@@ -10,7 +10,7 @@ body {
     background-color: black;
 }
 .background {
-    background-image: url("/static/img/bg.jpg");
+    background-image: url("../img/bg.jpg");
     -webkit-filter: blur(5px) brightness(30%);
             filter: blur(5px) brightness(30%);
     background-repeat: no-repeat;
