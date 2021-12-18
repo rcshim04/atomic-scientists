@@ -57,7 +57,7 @@ const info = [
         "nickname": "Walter White"
     }
 ]
-let data = [
+const data = [
     {
         "basic": {
             "Full Name": "John Dalton",
